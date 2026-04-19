@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <title>Boda | Julia & Marcelino</title>
+    <meta name="description" content="Con la bendición de Dios, Julia y Marcelino se unen en matrimonio y te invitan a compartir su alegría y gratitud.">
+    <meta name="theme-color" content="#04060d">
+
+    <!-- Open Graph / WhatsApp preview -->
+    <!-- TODO: reemplaza YOUR-DOMAIN con tu URL real de Vercel antes de publicar -->
+    <meta property="og:type"        content="website">
+    <meta property="og:url"         content="https://YOUR-DOMAIN.vercel.app/">
+    <meta property="og:title"       content="Boda | Julia & Marcelino">
+    <meta property="og:description" content="Con la bendición de Dios, nos unimos en matrimonio. Ven a compartir nuestra alegría y gratitud.">
+    <meta property="og:image"       content="https://YOUR-DOMAIN.vercel.app/img/hero-bg.jpg">
+    <meta property="og:image:alt"   content="Invitación de boda — Julia Velázquez y Marcelino Contreras">
+    <meta property="og:locale"      content="es_MX">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card"        content="summary_large_image">
+    <meta name="twitter:title"       content="Boda | Julia & Marcelino">
+    <meta name="twitter:description" content="Con la bendición de Dios, nos unimos en matrimonio. Ven a compartir nuestra alegría y gratitud.">
+    <meta name="twitter:image"       content="https://YOUR-DOMAIN.vercel.app/img/hero-bg.jpg">
+
+    <!-- Preload imagen principal para LCP -->
+    <link rel="preload" as="image" href="img/hero-bg.jpg" fetchpriority="high">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Great+Vibes&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=7">
+</head>
+<body>
+    <div class="intro-photo" id="intro-photo" aria-hidden="true">
+        <img src="img/Julia%20%26%20Marce%20-%204.png" alt="Retrato de Julia y Marcelino">
+        <div class="intro-photo-overlay"></div>
+        <div class="intro-photo-copy">
+            <p class="intro-photo-kicker">Julia &amp; Marcelino</p>
+            <p class="intro-photo-line">Una pausa breve antes de abrir la invitación</p>
+        </div>
+    </div>
+    <!-- ============================================
+         MUSIC BAR — Flotante en la parte inferior
+    ============================================ -->
+    <div class="music-bar" id="music-bar">
+        <div class="music-visualizer">
+            <span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="music-meta">
+            <span class="music-label">Melodia de la boda</span>
+            <span class="music-track" id="music-text">Toca para escuchar nuestra cancion</span>
+        </div>
+        <button class="play-toggle" id="audio-toggle" type="button" aria-label="Reproducir melodia" aria-pressed="false">
+            <span id="audio-icon">▶</span>
+        </button>
+    </div>
+    <audio id="bg-music" preload="none" loop>
+        <source src="audio/melodia-boda.mp3" type="audio/mpeg">
+    </audio>
+    <!-- ============================================
+         MÓDULO 1: HERO EDITORIAL
+    ============================================ -->
+    <header id="hero-editorial" class="hero-editorial">
+        <img src="img/hero-bg.jpg" class="hero-bg-layer" alt="Fondo principal de la boda">
+        <div class="hero-overlay-layer"></div>
+        <div class="hero-content-editorial">
+            <p class="pre-title">Nuestra Boda</p>
+            <h1 class="couple-names">Julia <span class="hero-ampersand">&amp;</span> Marcelino</h1>
+            <p class="hero-subtitle">Con la bendición de Dios, nos unimos en matrimonio.<br>Ven a compartir nuestra alegría y gratitud.</p>
+            
+            <div class="hero-chips">
+                <span class="chip">🗓️ 08 de agosto de 2026</span>
+                <span class="chip">⏰ 12:00 hrs</span>
+                <span class="chip">📍 Plaza Lindavista</span>
+            </div>
+            
+            <div class="hero-story">
+                <p>“Con gran alegría y agradecimiento, nos complacemos en invitarles a la celebración de nuestro matrimonio. Deseamos compartir con ustedes este momento tan especial, rodeados del cariño de nuestras familias y amigos.”</p>
+            </div>
+        </div>
+        <div class="scroll-hint" aria-hidden="true">
+            <span>✦</span>
+            <span class="scroll-hint-line"></span>
+        </div>
+    </header>
+
+<section id="padrinos" class="section fade-in">
+        <div class="container">
+            <div class="section-header">
+                <div class="ornament-divider" aria-hidden="true">✦ ✦ ✦</div>
+                <h2 class="section-title">Quienes nos acompañan</h2>
+                <p class="section-subtitle">Personas que hacen posible este momento con su amor y presencia</p>
+            </div>
+
+            <div class="padrinos-grid">
+
+                <!-- Velación — full width por peso ceremonial -->
+                <div class="padrino-card padrino-velacion fade-in" style="--delay: 0.1s">
+                    <div class="padrino-icon-wrap">
+                        <svg class="padrino-svg" viewBox="0 0 60 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <ellipse cx="30" cy="75" rx="8" ry="3" fill="#c5a059" opacity="0.3"/>
+                            <rect x="26" y="30" width="8" height="40" rx="4" fill="#c5a059" opacity="0.9"/>
+                            <ellipse cx="30" cy="28" rx="6" ry="10" fill="#f0c060" opacity="0.8"/>
+                            <ellipse cx="30" cy="22" rx="4" ry="7" fill="#fff8e1" opacity="0.9"/>
+                            <path d="M30,15 Q35,8 30,5 Q25,8 30,15" fill="#fff8e1"/>
+                        </svg>
+                    </div>
+                    <span class="padrino-tipo">Padrinos de velacion</span>
+                    <div class="padrino-nombres-duo">
+                        <p class="padrino-nombre">Ernestino Del Angel Santiago</p>
+                        <span class="padrino-y">&</span>
+                        <p class="padrino-nombre">Martha Modesto Ramos</p>
+                    </div>
+                </div>
+
+                <!-- Lazo — centrada -->
+                <div class="padrino-card padrino-lazo fade-in" style="--delay: 0.2s">
+                    <div class="padrino-icon-wrap">
+                        <svg class="padrino-svg" viewBox="0 0 80 60" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M10,30 C10,10 40,10 40,30 C40,10 70,10 70,30 C70,50 40,50 40,30 C40,50 10,50 10,30 Z" stroke="#c5a059" stroke-width="2" fill="none"/>
+                            <circle cx="40" cy="30" r="4" fill="#c5a059"/>
+                        </svg>
+                    </div>
+                    <span class="padrino-tipo">Madrina de lazo</span>
+                    <p class="padrino-nombre solo">Sara leon Hdz</p>
+                </div>
+
+                <!-- Arras -->
+                <div class="padrino-card padrino-arras fade-in" style="--delay: 0.3s">
+                    <div class="padrino-icon-wrap">
+                        <svg class="padrino-svg" viewBox="0 0 80 60" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <circle cx="20" cy="35" r="10" stroke="#c5a059" stroke-width="1.5" fill="none"/>
+                            <circle cx="40" cy="30" r="10" stroke="#c5a059" stroke-width="1.5" fill="none"/>
+                            <circle cx="60" cy="35" r="10" stroke="#c5a059" stroke-width="1.5" fill="none"/>
+                            <line x1="20" y1="45" x2="20" y2="55" stroke="#c5a059" stroke-width="1"/>
+                            <line x1="40" y1="40" x2="40" y2="55" stroke="#c5a059" stroke-width="1"/>
+                            <line x1="60" y1="45" x2="60" y2="55" stroke="#c5a059" stroke-width="1"/>
+                        </svg>
+                    </div>
+                    <span class="padrino-tipo">Padrinos de Arras</span>
+                    <div class="padrino-nombres-duo">
+                        <p class="padrino-nombre">Felix Del Angel Mora</p>
+                        <span class="padrino-y">&</span>
+                        <p class="padrino-nombre">Diana isela Lopez Lopez</p>
+                    </div>
+                </div>
+
+                <!-- Pastel -->
+                <div class="padrino-card padrino-pastel fade-in" style="--delay: 0.4s">
+                    <div class="padrino-icon-wrap">
+                        <svg class="padrino-svg" viewBox="0 0 80 70" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <rect x="10" y="40" width="60" height="25" rx="3" stroke="#c5a059" stroke-width="1.5" fill="none"/>
+                            <rect x="20" y="25" width="40" height="18" rx="3" stroke="#c5a059" stroke-width="1.5" fill="none"/>
+                            <line x1="40" y1="15" x2="40" y2="25" stroke="#c5a059" stroke-width="1.5"/>
+                            <circle cx="40" cy="13" r="4" stroke="#c5a059" stroke-width="1.5" fill="none"/>
+                            <path d="M10,40 C20,32 30,48 40,40 C50,32 60,48 70,40" stroke="#c5a059" stroke-width="1" fill="none"/>
+                        </svg>
+                    </div>
+                    <span class="padrino-tipo">Padrinos de Pastel</span>
+                    <div class="padrino-nombres-duo">
+                        <p class="padrino-nombre">Felipe Avalos</p>
+                        <span class="padrino-y">&</span>
+                        <p class="padrino-nombre">Claudia Hinojosa</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         MÓDULO 2: ITINERARIO + GUÁRDATE LA FECHA
+    ============================================ -->
+    <section id="programa" class="section fade-in">
+        <div class="container">
+            <div class="section-header">
+                <div class="ornament-divider" aria-hidden="true">✦ ✦ ✦</div>
+                <h2 class="section-title">El plan del día</h2>
+                <p class="section-subtitle">Guarda la fecha: 08 de agosto de 2026.</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item fade-in" style="--delay: 0.1s">
+                    <div class="timeline-dot"><span>⛪</span></div>
+                    <div class="timeline-content">
+                        <p class="timeline-time">12:00 p. m.</p>
+                        <h3 class="timeline-event">Ceremonia</h3>
+                        <p class="timeline-desc">El momento en el que uniremos nuestras vidas ante Dios.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in" style="--delay: 0.2s">
+                    <div class="timeline-dot"><span>🥂</span></div>
+                    <div class="timeline-content">
+                        <p class="timeline-time">2:00 p. m.</p>
+                        <h3 class="timeline-event">Cóctel</h3>
+                        <p class="timeline-desc">Un espacio para brindar, abrazarnos y comenzar la celebración.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in" style="--delay: 0.3s">
+                    <div class="timeline-dot"><span>🍽️</span></div>
+                    <div class="timeline-content">
+                        <p class="timeline-time">8:30 p. m.</p>
+                        <h3 class="timeline-event">Cena</h3>
+                        <p class="timeline-desc">La cena se sirve a las 8:30 p. m.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in" style="--delay: 0.4s">
+                    <div class="timeline-dot"><span>🌙</span></div>
+                    <div class="timeline-content">
+                        <p class="timeline-time">Hasta que el cuerpo aguante</p>
+                        <h3 class="timeline-event">Fiesta</h3>
+                        <p class="timeline-desc">Música, baile y momentos para recordar toda la vida.</p>
+                    </div>
+                </div>
+                
+                <div class="calendar-card glass-accent glow-border fade-in" style="--delay: 0.5s">
+                    <div class="calendar-card-content">
+                        <h3>Guarda la fecha</h3>
+                        <p class="calendar-date">08 de agosto de 2026 · 12:00 hrs</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         MÓDULO 3: UBICACIÓN
+    ============================================ -->
+    <section id="ubicacion" class="section fade-in">
+        <div class="container">
+            <div class="section-header">
+                <div class="ornament-divider" aria-hidden="true">✦ ✦ ✦</div>
+                <h2 class="section-title">Cómo llegar</h2>
+            </div>
+            
+            <div class="location-grid">
+                <div class="location-info fade-in" style="--delay: 0.1s">
+                    <h3>Plaza Lindavista | Lindavista Eventos</h3>
+                    <p class="location-address">20 de Noviembre No. 101, Fracc. Reynosa, Cd. Reynosa, Tamaulipas, Mexico</p>
+                    <ul class="location-tips">
+                        <li><strong>Ubicación del evento:</strong> Plaza Lindavista | Lindavista Eventos.</li>
+                        <li><strong>Dirección:</strong> 20 de Noviembre No. 101, Fracc. Reynosa, Cd. Reynosa, Tamaulipas, Mexico.</li>
+                    </ul>
+                    <p class="location-phrase">"Gracias por acompañarnos en un día que quedará para siempre en nuestro corazón."</p>
+                    <a href="https://www.google.com/maps?q=Plaza+Lindavista+Lindavista+Eventos+20+de+Noviembre+101+Fracc.+Reynosa+Cd.+Reynosa+Tamaulipas+Mexico" class="btn btn-primary pulse" target="_blank" rel="noopener noreferrer">Abrir en Google Maps</a>
+                </div>
+                
+                <div class="location-map map-wrapper glow-border fade-in" style="--delay: 0.2s">
+                    <iframe src="https://www.google.com/maps?q=Plaza+Lindavista+Lindavista+Eventos+20+de+Noviembre+101+Fracc.+Reynosa+Cd.+Reynosa+Tamaulipas+Mexico&output=embed" width="100%" height="100%" style="border:0; min-height: 300px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         MÓDULO 4: ÁLBUM EDITORIAL
+    ============================================ -->
+    <section id="album" class="section fade-in">
+        <div class="container">
+            <div class="section-header">
+                <div class="ornament-divider" aria-hidden="true">✦ ✦ ✦</div>
+                <h2 class="section-title">Fragmentos de nuestra historia</h2>
+                <p class="section-subtitle">Un pequeño álbum de momentos que nos han traído hasta aquí.</p>
+            </div>
+
+            <div class="album-showcase album-showcase--single">
+                <div class="album-slider glow-border" data-album-slider>
+                    <article class="album-slide is-active">
+                        <img src="img/album/Julia%20%26%20Marce%20-%201.png" alt="Retrato editorial de Julia y Marcelino">
+                        <div class="album-caption">
+                            <p class="album-step">Capítulo I</p>
+                            <h3>Madrid, una noche cualquiera</h3>
+                            <p>La clase de casualidad que termina cambiando todo.</p>
+                        </div>
+                    </article>
+                    <article class="album-slide">
+                        <img src="img/album/Julia%20%26%20Marce%20-%202.png" alt="Paseo romántico de la pareja">
+                        <div class="album-caption">
+                            <p class="album-step">Capítulo II</p>
+                            <h3>Promesas en voz baja</h3>
+                            <p>Viajes, conversaciones largas y un montón de planes compartidos.</p>
+                        </div>
+                    </article>
+                    <article class="album-slide">
+                        <img src="img/album/Julia%20%26%20Maarce%20-%203.png" alt="La pareja en un momento íntimo y elegante">
+                        <div class="album-caption">
+                            <p class="album-step">Capítulo III</p>
+                            <h3>El sí ya venía escrito</h3>
+                            <p>Lo que comenzó bonito terminó convirtiéndose en hogar.</p>
+                        </div>
+                    </article>
+                    <div class="album-dots" aria-hidden="true">
+                        <span class="album-dot is-active"></span>
+                        <span class="album-dot"></span>
+                        <span class="album-dot"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         REGALOS
+    ============================================ -->
+    <section id="gifts" class="section fade-in">
+        <div class="container">
+            <div class="section-header">
+                <div class="ornament-divider" aria-hidden="true">✦ ✦ ✦</div>
+                <h2 class="section-title">Sugerencia de regalo</h2>
+            </div>
+            <div class="info-box glass-accent">
+                <span class="card-icon" aria-hidden="true">✨</span>
+                <p class="gift-main">Tu presencia ya es el regalo más grande.</p>
+                <p>Si deseas celebrar con un detalle adicional, puedes hacérnoslo llegar ese día.</p>
+                <div class="gift-line">
+                    <p>Un sobre con efectivo el día del evento<br>es siempre bienvenido con todo nuestro agradecimiento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         DRESS CODE
+    ============================================ -->
+    <section id="detalles" class="section fade-in">
+        <div class="container">
+            <div class="extra-info">
+                <div class="info-box glass-accent">
+                    <span class="card-icon" aria-hidden="true">👗</span>
+                    <h3>Código de vestimenta</h3>
+                    <p class="dress-code-title">Formal · Etiqueta</p>
+                    <p class="reserved">
+                        Los colores reservados para la novia son el <strong>Blanco</strong> y el <strong>Morado</strong>.<br>
+                        Gracias por lucir tan espectacular como merece esta noche.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         MÓDULO 5: RSVP
+    ============================================ -->
+    <section id="rsvp" class="section fade-in">
+        <div class="container">
+            <div class="section-header">
+                <div class="ornament-divider" aria-hidden="true">✦ ✦ ✦</div>
+                <h2 class="section-title">Confirmación de asistencia</h2>
+                <p class="section-subtitle">Acompáñanos el 08 de agosto de 2026 y confírmanos tu asistencia por WhatsApp.</p>
+            </div>
+
+            <div class="rsvp-whatsapp glass-accent glow-border fade-in" style="--delay: 0.15s">
+                <p class="rsvp-kicker">Asistencia</p>
+                <h3>Confirma por WhatsApp</h3>
+                <p class="rsvp-copy">Pulsa el botón y se abrirá WhatsApp con un mensaje preparado para enviarnos tu confirmación.</p>
+                <p class="rsvp-helper">Número de contacto: <strong>8992683999</strong></p>
+                <div class="actions">
+                    <a href="https://wa.me/528992683999?text=Hola%2C%20confirmo%20mi%20asistencia%20a%20la%20boda%20de%20Julia%20y%20Marcelino.%20Mi%20nombre%20es%20___%20y%20asistiremos%20___%20personas." class="btn btn-whatsapp pulse" target="_blank" rel="noopener noreferrer">Confirmar asistencia</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+    ============================================ -->
+    <footer class="footer">
+        <div class="footer-names">Julia &amp; Marcelino</div>
+        <p class="footer-date">08 · agosto · 2026</p>
+        <p class="footer-tagline">Hecho con amor oscuro, para una noche que brillará para siempre ✦</p>
+    </footer>
+
+<!-- Partículas flotantes -->
+    <div id="particles-container" aria-hidden="true"></div>
+
+    <script src="main.js"></script>
+</body>
+</html>
