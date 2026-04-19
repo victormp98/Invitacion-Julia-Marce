@@ -266,7 +266,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         bgMusic.addEventListener('error', () => {
-            if (musicText) musicText.textContent = 'Pega tu audio en /audio/melodia-boda.mp3';
+            if (musicText) musicText.textContent = 'Pega tu audio en /audio/melodia-boda.mp4';
             audioToggle.setAttribute('disabled', 'disabled');
         });
     }
