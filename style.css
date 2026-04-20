@@ -620,6 +620,11 @@ strong {
     margin-top: 0.25rem;
 }
 
+.timeline-content .gold-link {
+    display: inline-block;
+    margin-top: 0.85rem;
+}
+
 /* =============================================
    COUNTDOWN
 ============================================= */
@@ -1380,6 +1385,14 @@ strong {
     gap: 3rem;
     align-items: center;
     margin-top: 2rem;
+}
+.location-stack {
+    display: grid;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+.location-stack .location-grid {
+    margin-top: 0;
 }
 .location-info h3 {
     font-family: 'Cinzel Decorative', serif;
