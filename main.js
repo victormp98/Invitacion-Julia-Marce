@@ -182,8 +182,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (albumSlider) {
         const slides = Array.from(albumSlider.querySelectorAll('.album-slide'));
         const dots = Array.from(albumSlider.querySelectorAll('.album-dot'));
+        const prevButton = albumSlider.querySelector('[data-album-prev]');
+        const nextButton = albumSlider.querySelector('[data-album-next]');
         let activeIndex = slides.findIndex(slide => slide.classList.contains('is-active'));
         let albumTimer;
+        const hoverPauseEnabled = window.matchMedia('(pointer: fine)').matches;
 
         if (activeIndex < 0) activeIndex = 0;
 
@@ -197,6 +200,21 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             activeIndex = nextIndex;
+        }
+
+        function restartAlbum() {
+            if (reducedMotion) return;
+            startAlbum();
+        }
+
+        function goToSlide(nextIndex) {
+            showSlide(nextIndex);
+            restartAlbum();
+        }
+
+        function goToAdjacentSlide(direction) {
+            const nextIndex = (activeIndex + direction + slides.length) % slides.length;
+            goToSlide(nextIndex);
         }
 
         function startAlbum() {
@@ -215,8 +233,22 @@ document.addEventListener('DOMContentLoaded', () => {
         showSlide(activeIndex);
         startAlbum();
 
-        albumSlider.addEventListener('mouseenter', stopAlbum);
-        albumSlider.addEventListener('mouseleave', startAlbum);
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => goToSlide(index));
+        });
+
+        if (prevButton) {
+            prevButton.addEventListener('click', () => goToAdjacentSlide(-1));
+        }
+
+        if (nextButton) {
+            nextButton.addEventListener('click', () => goToAdjacentSlide(1));
+        }
+
+        if (hoverPauseEnabled) {
+            albumSlider.addEventListener('mouseenter', stopAlbum);
+            albumSlider.addEventListener('mouseleave', startAlbum);
+        }
     }
 
 
